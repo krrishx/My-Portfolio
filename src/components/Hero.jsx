@@ -251,7 +251,7 @@ const Hero = () => {
                             - So Text Top, Image Bottom.
                             Let's enforce Text Top, Image Bottom.
                          */
-                        flex-direction: column-reverse !important;
+                        flex-direction: column !important;
                         text-align: center !important;
                         gap: 3rem;
                     }
