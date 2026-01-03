@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaInstagram, FaDownload } from 'react-icons/fa';
 import BlurText from './BlurText';
 import TextType from './TextType';
 import LightRays from './LightRays';
@@ -202,10 +202,11 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 1, delay: 0.8 }}
+                        style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}
                     >
                         <a href="#contact" style={{
                             padding: '16px 40px',
-                            background: 'var(--primary)', // Solid Primary
+                            background: 'var(--primary)',
                             color: '#000',
                             borderRadius: '50px',
                             fontWeight: '700',
@@ -214,9 +215,36 @@ const Hero = () => {
                             border: 'none',
                             display: 'inline-flex',
                             alignItems: 'center',
-                            gap: '10px'
+                            gap: '10px',
+                            textDecoration: 'none'
                         }}>
                             Connect <FaEnvelope />
+                        </a>
+
+                        <a href="/KRRISH RAJ RESUME.pdf" download="KRRISH RAJ RESUME.pdf" style={{
+                            padding: '16px 40px',
+                            background: 'transparent',
+                            color: 'var(--text-primary)',
+                            borderRadius: '50px',
+                            fontWeight: '700',
+                            fontSize: '1rem',
+                            border: '1px solid var(--primary)',
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '10px',
+                            textDecoration: 'none',
+                            transition: '0.3s'
+                        }}
+                            onMouseEnter={(e) => {
+                                e.currentTarget.style.background = 'rgba(203, 161, 53, 0.1)';
+                                e.currentTarget.style.boxShadow = '0 0 20px rgba(203, 161, 53, 0.2)';
+                            }}
+                            onMouseLeave={(e) => {
+                                e.currentTarget.style.background = 'transparent';
+                                e.currentTarget.style.boxShadow = 'none';
+                            }}
+                        >
+                            Resume <FaDownload />
                         </a>
                     </motion.div>
 
@@ -268,7 +296,7 @@ const Hero = () => {
                     }
                 }
             `}</style>
-        </section>
+        </section >
     );
 };
 
