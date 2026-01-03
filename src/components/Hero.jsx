@@ -233,7 +233,7 @@ const Hero = () => {
 
             <style>{`
                 .hero-title-left {
-                    font-size: clamp(3.5rem, 6vw, 5.5rem);
+                    font-size: clamp(2.5rem, 6vw, 5.5rem);
                     font-weight: 800;
                     line-height: 1.1;
                     font-family: 'Inter', sans-serif;
